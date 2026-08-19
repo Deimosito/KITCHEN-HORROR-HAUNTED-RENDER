@@ -103,6 +103,7 @@ public class PJ : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.E))
 		{
 			Debug.DrawLine(myTransform.position, myTransform.position + myTransform.forward * 100f, Color.red, 100.0f);
+			Debug.Log($"PJ::GameplayUpdate myTransform.position = {myTransform.position}, myTransform.position + myTransform.forward * 100f = {myTransform.position + myTransform.forward * 100f}");
 			if (Physics.Raycast(myTransform.position, myTransform.forward, out RaycastHit hitInfo, 100f))
 			{
 				if (hitInfo.collider.gameObject.CompareTag("Interactuable"))
