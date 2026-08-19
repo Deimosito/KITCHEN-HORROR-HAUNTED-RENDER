@@ -25,13 +25,20 @@ public class Item : Interactuable
 		}
 
 		owner = newOwner;
-		
+
+		if (owner == null)
+		{
+			transform.parent = null; //Remove parent if no owner
+			return;
+		}
+
 		GameObject socketObject = owner.SetItem(myItem);
 		//Set parent
 		transform.parent = owner.transform;
 		transform.localPosition = socketObject.transform.localPosition;
 		transform.localRotation = socketObject.transform.localRotation;
 		//Set position in socket & asign holded comida to new owner
+
 	}
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created

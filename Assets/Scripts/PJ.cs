@@ -14,7 +14,7 @@ public class PJ : MonoBehaviour
 
 	GameStates currentGameState = GameStates.Invalid;
 
-    private Transform myTransform;
+	private Transform myTransform;
 	private ItemOwner myItemOwner;
 	private Vector2 _mousePosition;
 	private Vector2 _previousPosition;
@@ -25,7 +25,7 @@ public class PJ : MonoBehaviour
 	{
 		currentGameState = newGameState;
 
-		switch(currentGameState)
+		switch (currentGameState)
 		{
 			case GameStates.Gameplay:
 				Cursor.lockState = CursorLockMode.Locked;
@@ -46,7 +46,7 @@ public class PJ : MonoBehaviour
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
-    {
+	{
 		myTransform = GetComponent<Transform>();
 		myItemOwner = GetComponent<ItemOwner>();
 		SetCurrentGameState(GameStates.Gameplay);
@@ -109,9 +109,9 @@ public class PJ : MonoBehaviour
 				if (hitInfo.collider.gameObject.CompareTag("Interactuable"))
 				{
 					Interactuable interactuable = hitInfo.collider.gameObject.GetComponent<Interactuable>();
-					if (myItemOwner.item != null)
+					if (myItemOwner.Item != null)
 					{
-						interactuable.Interactuar(myItemOwner.item);
+						interactuable.Interactuar(myItemOwner.Item);
 					}
 					else
 					{
@@ -119,6 +119,11 @@ public class PJ : MonoBehaviour
 					}
 				}
 			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			myItemOwner.DropItem();
 		}
 	}
 
@@ -134,8 +139,8 @@ public class PJ : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-    {
-		switch(currentGameState)
+	{
+		switch (currentGameState)
 		{
 			case GameStates.Gameplay:
 				GameplayUpdate();

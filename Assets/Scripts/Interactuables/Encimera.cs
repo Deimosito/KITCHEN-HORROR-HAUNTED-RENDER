@@ -7,13 +7,13 @@ public class Encimera : Interactuable
     ItemOwner myItemOwner;
 	public override void Interactuar(Item heldItem)
 	{
-		if ((myItemOwner.item == null))
+		if ((myItemOwner.Item == null))
 		{
 			heldItem.ChangeOwner(myItemOwner);
 		}
 		else 
 		{ 
-			myItemOwner.item.Interactuar(heldItem);
+			myItemOwner.Item.Interactuar(heldItem);
 		}
 		ReproducirAnimacion();
 	}
