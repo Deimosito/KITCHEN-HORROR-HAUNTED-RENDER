@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3783064649500780360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5565021028463509512}
+  - component: {fileID: 3799357210331465784}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5565021028463509512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783064649500780360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 525.5245, y: 192.79897, z: 3.9879}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3799357210331465784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783064649500780360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f96592473b952f4f8344c4f684caf9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sectionFrameUI: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueHeader: {fileID: 0}
+  dialoguePortrait: {fileID: 0}
+  player: {fileID: 0}
+  currentLine: 
+  charactersFile: {fileID: 4900000, guid: d5a8c9dc7b3fc3d4bb3b842ce09739ff, type: 3}
+  EditorCreatedCharacters:
+  - characterName: Jonatest Joestar
+    characterPortrait: {fileID: 2800000, guid: 22012f0b9d92459439f364930076c3bf, type: 3}
+    characterColor:
+      serializedVersion: 2
+      rgba: 4288151570
+  - characterName: Testio Brando
+    characterPortrait: {fileID: 2800000, guid: 84b93d66ef7f9a74fa706df5238a5de9, type: 3}
+    characterColor:
+      serializedVersion: 2
+      rgba: 4278219901
+  breakLineString: <br>
+  midLineCutString: '-'
+  lettersPerSecond: 30
+  maxCharactersPerLine: 40
+  maxLinesPerDialogueScreen: 3
+  scrollLines: 1
+  scrollLinesPerSecond: 3
