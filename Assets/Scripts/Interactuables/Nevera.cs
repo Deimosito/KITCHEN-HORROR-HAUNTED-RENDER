@@ -6,14 +6,14 @@ public class Nevera : Interactuable
 {
     private Animator animator;
 
-    public virtual void Interactuar()
+    public override void Interactuar()
 	{
         Interactuar(null);
 	}
 
 	public override void Interactuar(Item heldItem)
 	{
-        animator.SetTrigger("Open");
+        animator.SetTrigger("OPEN");
 	}
 
     public override void ReproducirAnimacion()
